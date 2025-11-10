@@ -1,0 +1,159 @@
+/* --- Cores e Fontes --- */
+:root {
+    --fundo-geral: #faeab2;
+    --cor-titulo: #cc3b25;
+    --cor-estilo: #b06915;
+    --cor-grafico: #f0b800;
+    --fonte-principal: 'Work Sans', sans-serif;
+    --shadow-sutil: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilo base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--fundo-geral);
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Header e Footer --- */
+.header, .footer {
+    background-color: var(--cor-titulo);
+    color: #fff;
+    padding: 1.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.footer {
+    margin-top: auto;
+    font-size: 0.9rem;
+    padding: 1rem 0;
+}
+
+/* --- Conteúdo principal --- */
+.container {
+    max-width: 800px; 
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: var(--shadow-sutil);
+    border-radius: 10px;
+    
+    display: block; 
+}
+
+/* --- Barra Lateral --- */
+.side-bar {
+    background-color: var(--fundo-geral); 
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.img-side-bar {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem auto;
+    padding: 0.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.text-justify {
+    text-align: center; 
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.side-bar a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.side-bar .logo {
+    width: 80%;
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto 0 auto;
+    background-color: var(--cor-grafico);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* --- Projetos --- */
+.projetos {
+    padding: 0;
+    background-color: #fff; 
+}
+
+.pj-content-items {
+    margin-bottom: 1.5rem;
+}
+
+/* Títulos */
+h2 {
+    color: var(--cor-titulo);
+    border-bottom: 3px solid var(--cor-grafico);
+    padding-bottom: 0.5rem;
+    margin-top: 2.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+h2:first-of-type {
+    margin-top: 0;
+}
+
+/* Elementos de Parágrafo */
+.projetos p {
+    color: #555;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+/* Imagens dos Projetos */
+.img-card {
+    width: 100%;
+    max-width: 80px;
+    height: auto;
+    margin: 1rem 15px 0.5rem 0;
+    display: block;
+    float: left;
+    padding: 8px;
+    background-color: var(--cor-grafico);
+    border-radius: 5px;
+}
+
+.projetos p::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* --- Responsividade de coluna --- */
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+}
